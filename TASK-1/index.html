@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediMart - Medicine Delivery Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: hsl(209, 100%, 83%);
+        }
+        .navbar {
+            background-color: #002246;
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar-brand {
+            color: #fff;
+            font-size: 24px;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+        .navbar-icons {
+            margin-right: 20px;
+        }
+        .navbar-icons i {
+            color: #fff;
+            font-size: 20px;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        h1 {
+            color: #333;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            font-size: 18px;
+            margin-right: 15px;
+        }
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+        .feature {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 0 10px 20px;
+            max-width: 300px;
+            text-align: left;
+        }
+        .feature h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .feature p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .feature img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .benefits {
+            background-color: #fff;
+            padding: 50px 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            text-align: left;
+        }
+        .benefits h2 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .benefits ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .benefits li {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .testimonial {
+            background-color: #f9f9f9;
+            padding: 50px 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            text-align: left;
+        }
+        .testimonial p {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .testimonial-author {
+            color: #333;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .footer p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .contact-form {
+            background-color: #fff;
+            padding: 50px 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            text-align: left;
+        }
+        .contact-form label {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .contact-form input[type="text"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        .contact-form textarea {
+            height: 150px;
+        }
+        .contact-form button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 5px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            position: relative;
+        }
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+        
+        
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 50px 10px;
+            }
+            .feature {
+                margin: 0 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" class="navbar-brand"><i class="fas fa-prescription-bottle-alt"></i> MediMart</a>
+        <div class="navbar-icons">
+            <i class="fas fa-shopping-cart"></i>
+            <i class="fas fa-user"></i>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Welcome to MediMart - Your Reliable Medicine Delivery Service</h1>
+        <p>Get your medicines delivered to your doorstep quickly and conveniently.</p>
+        <a href="#" class="cta-button">Order Now</a>
+        <a href="#" class="cta-button">View Offers</a>
+        <div class="features">
+            <div class="feature">
+                <img src="wide vareities.jpeg" alt="Wide Selection">
+                <h2>Wide Varieties</h2>
+                <p>Choose from a vast range of medicines and healthcare products.</p>
+            </div>
+            <div class="feature">
+                <img src="fast delivery.jpeg" alt="Fast Delivery">
+                <h2>Fast Delivery</h2>
+                <p>Receive your order quickly with our speedy delivery service.</p>
+            </div>
+            <div class="feature">
+                <img src="24-7 support-removebg-preview.jpg" alt="24/7 Support">
+                <h2>24/7 Support</h2>
+                <p>Our customer support team is available round the clock to assist you.</p>
+            </div>
+        </div>
+        <div class="benefits">
+            <h2>Why Choose MediMart?</h2>
+            <ul>
+                <li>Convenient online ordering system</li>
+                <li>Fast and reliable delivery</li>
+                <li>Wide selection of quality products</li>
+                <li>24/7 customer support</li>
+                <li>Easy returns and refunds</li>
+                <li>Secure payment options</li>
+            </ul>
+        </div>
+        <div class="testimonial">
+            <h2>What Our Customers Say</h2>
+            <p>"I love how easy it is to order my medicines from MediMart. The delivery is always on time, and the customer service is excellent!"</p>
+            <p class="testimonial-author">-ELON MUSK</p>
+        </div>
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Your Email</label>
+                <input type="text" id="email" name="email" required>
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        
+    <div class="footer">
+        <p>&copy; 2024 MediMart. All rights reserved.</p>
+        <p>Designed by Ashween</p>
+    </div>
+</body>
+</html>
